@@ -18,7 +18,7 @@ O foco é na **análise de sentimentos** com o uso de **N-grams** como *features
    ```bash
    git clone https://github.com/SBittencourt/CAE-1.git
    cd CAE.1
-````
+```
 
 2. Instale as dependências:
 
