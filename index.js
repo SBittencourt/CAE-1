@@ -28,19 +28,16 @@ function featuresFromText(text) {
   return [...stems, ...bigrams, ...trigrams];
 }
 
-// Demonstração de N-grams
 const fraseDemo = "Eu não gostei do atendimento, mas o produto é bom.";
 const featsDemo = featuresFromText(fraseDemo);
 
 console.log("Demonstração de N-grams");
 console.log("Frase:", fraseDemo);
-console.log("Alguns features:", featsDemo.slice(0, 12));
+console.log("Features:", featsDemo);
 console.log();
 
-// Classificação de Sentimentos com Naive Bayes
 const classifier = new natural.BayesClassifier();
 
-// Conjunto de treino 
 const treino = [
   // Positivo
   ["amei o produto, excelente qualidade", "positivo"],
@@ -61,10 +58,8 @@ for (const [texto, rotulo] of treino) {
   classifier.addDocument(featuresFromText(texto), rotulo);
 }
 
-// Treina
 classifier.train();
 
-// Testes
 const testes = [
   "o produto é bom e recomendo",
   "serviço terrível, atendimento ruim",
@@ -80,7 +75,7 @@ for (const t of testes) {
   const label = classifier.classify(feats);
   const dist = classifier.getClassifications(feats);
   console.log(`Texto: "${t}"`);
-  console.log(`→ Predição: ${label}`);
-  console.log(`→ Scores:`, dist);
+  console.log(`Rótulo: ${label}`);
+  console.log(`Pontuações:`, dist);
   console.log();
 }
