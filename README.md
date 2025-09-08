@@ -16,7 +16,7 @@ O foco é na **análise de sentimentos** com o uso de **N-grams** como *features
 
 1. Clone este repositório ou baixe os arquivos:
    ```bash
-   git clone https://github.com/seu-usuario/nlp-sentiment-ngrams.git
+   git clone https://github.com/SBittencourt/CAE-1.git
    cd CAE.1
 ````
 
