@@ -1,3 +1,8 @@
+// PC. 5
+// Desenvolva um pequeno exemplo de utilização da biblioteca Natural para PLN em JavaScript. 
+// Ilustre a operação de pelo menos dois conceitos abordados no material introdutório.
+// Cite limitações dessa biblioteca. 
+
 const natural = require('natural');
 
 const tokenizer = new natural.WordTokenizer();
@@ -79,3 +84,8 @@ for (const t of testes) {
   console.log(`Pontuações:`, dist);
   console.log();
 }
+
+// Limitações da biblioteca Natural:
+// - A biblioteca natural tem suporte limitado ao português (funciona melhor em inglês).
+// - O modelo é simples e não captura ironia, sarcasmo ou contextos mais complexos
+// - Indicado para protótipos e fins educacionais, não para produção 
